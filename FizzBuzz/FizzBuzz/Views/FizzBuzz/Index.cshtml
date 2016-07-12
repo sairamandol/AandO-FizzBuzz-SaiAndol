@@ -1,0 +1,39 @@
+﻿
+@model List<FizzBuzz.Models.FizzBuzzViewModel>
+@{
+    ViewBag.Title = "Fizz Buzz";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>FizzBuzz</title>
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="page-header">
+        <h1>FizzBuzz </h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+
+            
+            <form class="form-inline" method="get" action="/">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="number" name="number" placeholder="Please enter the number">
+                    
+                </div>
+
+                <button type="submit" class="btn btn-primary">Go FizzBuzz</button>
+            </form>
+        </div>
+    </div>
+
+    <hr />
+    
+
+</body>
+</html>
