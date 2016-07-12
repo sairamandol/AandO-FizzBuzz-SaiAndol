@@ -19,7 +19,7 @@ namespace FizzBuzz.Tests
             //arrange
             var fizzBuzzService = MockRepository.GenerateMock<IFizzBuzzService>();
             IValidate shouldBeGreatorThan50 = MockRepository.GenerateMock<IValidate>();
-            var fizzBuzzController = new FizzBuzzController(fizzBuzzService, shouldBeGreatorThan50);
+            var fizzBuzzController = new FizzBuzzController(fizzBuzzService, shouldBeGreatorThan50, new ShouldBeBetween50And1000());
             //act
             var viewResult = fizzBuzzController.Index() as ViewResult;
             //assert
@@ -33,7 +33,7 @@ namespace FizzBuzz.Tests
             //arrange
             var fizzBuzzService = MockRepository.GenerateMock<IFizzBuzzService>();
             IValidate shouldBeGreatorThan50 = MockRepository.GenerateMock<IValidate>();
-            var fizzBuzzController = new FizzBuzzController(fizzBuzzService, shouldBeGreatorThan50);
+            var fizzBuzzController = new FizzBuzzController(fizzBuzzService, shouldBeGreatorThan50, new ShouldBeBetween50And1000());
             //act
             var viewResult = fizzBuzzController.Index(49) as ViewResult;
             //assert
@@ -49,7 +49,7 @@ namespace FizzBuzz.Tests
             var fizzBuzzService = MockRepository.GenerateMock<IFizzBuzzService>();
             IValidate shouldBeGreatorThan50 = MockRepository.GenerateMock<IValidate>();
             shouldBeGreatorThan50.Stub(v => v.Validate(Arg<int>.Is.Anything)).Return(true);
-            var fizzBuzzController = new FizzBuzzController(fizzBuzzService, shouldBeGreatorThan50);
+            var fizzBuzzController = new FizzBuzzController(fizzBuzzService, shouldBeGreatorThan50, new ShouldBeBetween50And1000());
             //act
             var viewResult = fizzBuzzController.Index(51) as ViewResult;
             //assert

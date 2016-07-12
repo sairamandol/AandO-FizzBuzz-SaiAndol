@@ -163,6 +163,7 @@
     <Compile Include="Services\Rules\DivisibleBy5Rule.cs" />
     <Compile Include="Services\Rules\IDivisibilityRule.cs" />
     <Compile Include="Validations\IValidate.cs" />
+    <Compile Include="Validations\ShouldBeBetween50And1000.cs" />
     <Compile Include="Validations\ShouldBeGreatorThan50.cs" />
   </ItemGroup>
   <ItemGroup>
