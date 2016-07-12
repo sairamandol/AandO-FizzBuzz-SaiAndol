@@ -66,6 +66,7 @@
     <Compile Include="Rules\DivisibleBy3And5RuleTests.cs" />
     <Compile Include="Rules\DivisibleBy3RuleTests.cs" />
     <Compile Include="Rules\DivisibleBy5RuleTests.cs" />
+    <Compile Include="Validations\ShouldBeGreatorThan50Tests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -20,11 +20,11 @@
     <div class="row">
         <div class="col-lg-6">
 
-            
+            @Html.ValidationSummary()
             <form class="form-inline" method="get" action="/">
                 <div class="form-group">
                     <input type="text" class="form-control" id="number" name="number" placeholder="Please enter the number">
-                    
+                    @Html.ValidationMessage("number", "*")
                 </div>
 
                 <button type="submit" class="btn btn-primary">Go FizzBuzz</button>

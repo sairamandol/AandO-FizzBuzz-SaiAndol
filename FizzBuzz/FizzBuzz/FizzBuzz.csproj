@@ -162,6 +162,8 @@
     <Compile Include="Services\Rules\DivisibleBy3Rule.cs" />
     <Compile Include="Services\Rules\DivisibleBy5Rule.cs" />
     <Compile Include="Services\Rules\IDivisibilityRule.cs" />
+    <Compile Include="Validations\IValidate.cs" />
+    <Compile Include="Validations\ShouldBeGreatorThan50.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
