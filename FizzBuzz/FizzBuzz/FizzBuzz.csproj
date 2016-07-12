@@ -155,6 +155,8 @@
     </Compile>
     <Compile Include="Models\FizzBuzzViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FizzBuzzService.cs" />
+    <Compile Include="Services\IFizzBuzzService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
