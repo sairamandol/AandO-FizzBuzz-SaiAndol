@@ -158,6 +158,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FizzBuzzService.cs" />
     <Compile Include="Services\IFizzBuzzService.cs" />
+    <Compile Include="Services\Rules\DivisibleBy3And5Rule.cs" />
+    <Compile Include="Services\Rules\DivisibleBy3Rule.cs" />
+    <Compile Include="Services\Rules\DivisibleBy5Rule.cs" />
+    <Compile Include="Services\Rules\IDivisibilityRule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
