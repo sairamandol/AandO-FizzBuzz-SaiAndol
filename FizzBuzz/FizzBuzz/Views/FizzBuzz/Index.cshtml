@@ -34,6 +34,9 @@
 
     <hr />
     
-
+    @foreach (var model in Model)
+    {
+        Html.RenderPartial("_FizzBuzzNumber", model);
+    }
 </body>
 </html>

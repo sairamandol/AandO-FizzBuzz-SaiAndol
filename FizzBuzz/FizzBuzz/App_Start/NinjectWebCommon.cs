@@ -1,4 +1,5 @@
 using System.Web.Http;
+using FizzBuzz.Services;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(FizzBuzz.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(FizzBuzz.App_Start.NinjectWebCommon), "Stop")]
@@ -66,6 +67,7 @@ namespace FizzBuzz.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IFizzBuzzService>().To<FizzBuzzService>();
         }        
     }
 }

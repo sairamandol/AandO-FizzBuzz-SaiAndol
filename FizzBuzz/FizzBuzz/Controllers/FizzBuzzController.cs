@@ -4,15 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FizzBuzz.Models;
+using FizzBuzz.Services;
 
 namespace FizzBuzz.Controllers
 {
     public class FizzBuzzController : Controller
     {
-        // GET: FizzBuzz
+        private readonly IFizzBuzzService _fizzBuzzService;
+
+        public FizzBuzzController(IFizzBuzzService fizzBuzzService)
+        {
+            _fizzBuzzService = fizzBuzzService;
+        }
+
         public ActionResult Index(int number = 0)
         {
-            return View(new List<FizzBuzzViewModel>());
+            var fizzBuzzViewModels = _fizzBuzzService.Generate(number);
+
+            return View(fizzBuzzViewModels);
         }
     }
 }

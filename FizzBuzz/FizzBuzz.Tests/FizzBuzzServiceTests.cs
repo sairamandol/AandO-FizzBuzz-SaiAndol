@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using FizzBuzz.Services;
 using NUnit.Framework;
 
@@ -20,6 +21,15 @@ namespace FizzBuzz.Tests
             Assert.That(fizzBuzzViewModels.First().Display == "1");
             Assert.That(fizzBuzzViewModels.Last().Number == 2);
             Assert.That(fizzBuzzViewModels.Last().Display == "2");
+        }
+
+        [Test]
+        public void Generate_GivenAnNegativeNumber_ThrowsArgumentException()
+        {
+            //arrange
+            var fizzBuzzService = new FizzBuzzService();
+            //act and assert
+            Assert.Throws<ArgumentException>(() => fizzBuzzService.Generate(-1));
         }
     }
 }
